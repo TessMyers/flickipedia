@@ -1,0 +1,17 @@
+{
+  "name": "flickipedia",
+  "version": "0.0.1",
+  "main": "web/basic-server.js",
+  "author": "Kia + Tess + Katherine",
+  "license": "Copyright 2014, Kia + Tess + Katherine. All rights reserved.",
+  "dependencies": {},
+  "devDependencies": {
+    "q": "^1.0.0",    // not sure we need
+    "request": "^2.34.0",
+    "underscore": "^1.6.0", // not sure we need
+    "jquery": "^1.11.1" // will probably come in handy
+  },
+  "scripts": {
+    // ??
+  }
+}
