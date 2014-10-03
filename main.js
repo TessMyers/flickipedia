@@ -1,5 +1,6 @@
 var _ = require('underscore');
 var http = require('request');
+var jQ = require('jquery');
 
 var headers = {
   // FILL ME IN
@@ -12,6 +13,33 @@ var request = document.getElementsByClassName('draft').value().toString();
 // MAKE IT URL FOR XML-PARSED WIKIPEDIA PAGE
 request =  'http://en.wikipedia.org/w/api.php?action=parse&section=0&prop=text&page=' + request + '&format=xml';
 
+
+// CALLBACK THAT GRABS FIRST PARA OF WIKIPEDIA ARTICLE
+var para = function(){
+  var xml; // = STRINGIFIED RETURN VALUE FROM GET REQUEST
+  var xmlDoc = jQ.parseXML(xml);
+  var jQ.xml = jQ(xmlDoc);
+  
+  // FIND FIRST <p> TAG
+  // GRAB INNARDS
+  // STOP AT FIRST </p> TAG
+
+};
+
+// CALLBACK THAT FORMATS FIRST PARA OF WIKIPEDIA ARTICLE
+var pretty = function(){
+
+
+            // var jQ.title = jQ.xml.find('div class="title"');
+
+            // WRAP jQ.title IN <h1> TAGS
+
+            // (RE?)WRAP EVERYTHING ELSE IN <P> TAGS? OR JUST DON'T MESS WITH THEM ABOVE
+
+            // WILD PROFITS
+
+
+};
 
 // SET OF RESPONSES TO HTTP REQUESTS
 var actions = {
