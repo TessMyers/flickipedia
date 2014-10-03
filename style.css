@@ -14,6 +14,9 @@ body {
   width: 960px;
   border-radius: 10px;
 }
+.image{
+  margin: 0px 0 0 563px;
+}
 
 .box {
   /*background-color: blue;*/
