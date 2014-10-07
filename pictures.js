@@ -16,7 +16,10 @@ var getPics = function(query){
   };
 
   $.getJSON(serviceURI, data, function(data, textStatus, jqXHR) {
-     makeURL(data.photos.photo[0]);
+    // pick one of the first 100 photos at random
+    var rand = Math.floor(Math.random() * 100);
+
+    makeURL(data.photos.photo[rand]);
   });
 
   var makeURL = function(image) {
@@ -26,11 +29,12 @@ var getPics = function(query){
   };
 
   var makeDiv = function(url){
-    // fix photo ratio
-    $('.photo').remove();
-    console.log('appending div')
-    var div = "<div class='photo' style='background-image: url("+ url + "); height: 300px; width: 500px;'></div>"
-    $('.image').append(div);
+    $('.image').empty();
+    var photo = new Image();
+    photo.class = 'photo';
+    photo.src = url;
+
+    $('.image').append(photo);
   }
 
 };
